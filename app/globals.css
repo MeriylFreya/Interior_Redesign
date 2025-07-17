@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 33, 37, 41; /* dark gray text */
+  --background-start-rgb: 255, 250, 240; /* light cream background */
+  --background-end-rgb: 255, 245, 230; /* lighter cream background */
+  --primary-color: 236, 72, 153; /* pink-500 */
+  --secondary-color: 59, 130, 246; /* blue-500 */
+  --accent-color: 16, 185, 129; /* emerald-500 */
+  --error-color: 220, 38, 38; /* red-600 */
+  --font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 33, 37, 41;
+    --background-start-rgb: 255, 250, 240;
+    --background-end-rgb: 255, 245, 230;
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:focus-visible {
+  outline: 2px solid rgb(var(--primary-color));
+  outline-offset: 2px;
+}
